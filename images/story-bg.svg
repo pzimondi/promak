@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="storySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="storyRoad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#storySky)"/>
+  <!-- Sun -->
+  <circle cx="400" cy="350" r="100" fill="#FEF3C7"/>
+  <circle cx="400" cy="350" r="130" fill="#FEF3C7" fill-opacity="0.4"/>
+  <!-- Mountains -->
+  <path d="M0,500 L150,350 L280,420 L420,300 L580,400 L720,320 L800,380 L800,500 Z" fill="#7C2D12" fill-opacity="0.6"/>
+  <path d="M0,500 L100,400 L240,450 L380,360 L520,440 L680,380 L800,430 L800,500 Z" fill="#451A03"/>
+  <!-- Road -->
+  <rect y="500" width="800" height="500" fill="url(#storyRoad)"/>
+  <!-- Road perspective lines -->
+  <path d="M 380 500 L 420 500 L 800 1000 L 0 1000 Z" fill="#334155"/>
+  <!-- Dashed center line -->
+  <g stroke="#FCD34D" stroke-width="6" stroke-dasharray="40,30" fill="none">
+    <line x1="400" y1="500" x2="400" y2="1000"/>
+  </g>
+</svg>

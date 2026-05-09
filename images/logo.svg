@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <rect x="2" y="8" width="64" height="64" rx="8" fill="#FEF3C7"/>
+  <g stroke="#7C2D12" fill="none" stroke-linecap="round">
+    <path d="M 14 22 Q 14 14, 26 14 L 44 14 Q 56 14, 56 26 L 56 36 Q 56 46, 44 46 L 30 46" stroke-width="3"/>
+    <path d="M 18 26 Q 18 20, 26 20 L 42 20 Q 50 20, 50 28 L 50 34 Q 50 40, 42 40 L 30 40" stroke-width="2.2" opacity="0.7"/>
+    <path d="M 22 30 Q 22 26, 28 26 L 40 26 Q 44 26, 44 30 L 44 32 Q 44 34, 40 34 L 30 34" stroke-width="1.6" opacity="0.5"/>
+  </g>
+  <rect x="14" y="40" width="4" height="22" rx="2" fill="#7C2D12"/>
+  <!-- Compass 4-point star -->
+  <g transform="translate(57, 61)">
+    <path d="M 0 -6 L 1.4 -1.4 L 6 0 L 1.4 1.4 L 0 6 L -1.4 1.4 L -6 0 L -1.4 -1.4 Z" fill="#0F766E"/>
+  </g>
+  <text x="80" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#7C2D12" letter-spacing="0.5">PROMAK</text>
+  <text x="80" y="62" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#92400E" letter-spacing="3">TRAVEL  &amp;  TOURS</text>
+</svg>

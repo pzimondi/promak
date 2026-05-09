@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyW" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#FB923C" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="hillsW" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#skyW)"/>
+  <!-- Sun -->
+  <circle cx="500" cy="220" r="50" fill="#FEF3C7"/>
+  <!-- Distant hills -->
+  <path d="M0,320 Q200,250 400,290 T800,280 L800,400 L0,400 Z" fill="#7C2D12" fill-opacity="0.5"/>
+  <path d="M0,360 Q200,300 400,340 T800,330 L800,400 L0,400 Z" fill="url(#hillsW)"/>
+  <!-- Vineyard rows (perspective) -->
+  <g fill="#15803D">
+    <path d="M0,400 L800,400 L800,420 L0,440 Z"/>
+    <path d="M0,460 L800,440 L800,460 L0,480 Z"/>
+    <path d="M0,500 L800,470 L800,490 L0,520 Z"/>
+    <path d="M0,540 L800,500 L800,520 L0,560 Z"/>
+    <path d="M0,580 L800,530 L800,550 L0,600 Z"/>
+  </g>
+  <g fill="#166534">
+    <path d="M0,440 L800,420 L800,425 L0,445 Z"/>
+    <path d="M0,480 L800,460 L800,465 L0,485 Z"/>
+    <path d="M0,520 L800,490 L800,495 L0,525 Z"/>
+  </g>
+  <!-- Vineyard farmhouse -->
+  <g transform="translate(150, 340)">
+    <rect x="0" y="0" width="60" height="40" fill="#FAFAF9"/>
+    <path d="M-5,0 L30,-25 L65,0 Z" fill="#7F1D1D"/>
+    <rect x="20" y="15" width="10" height="25" fill="#451A03"/>
+    <rect x="40" y="10" width="12" height="12" fill="#1E40AF" fill-opacity="0.6"/>
+  </g>
+  <!-- Trees -->
+  <g>
+    <circle cx="600" cy="350" r="20" fill="#15803D"/>
+    <rect x="598" y="350" width="4" height="20" fill="#451A03"/>
+    <circle cx="630" cy="355" r="15" fill="#16A34A"/>
+    <rect x="628" y="355" width="3" height="15" fill="#451A03"/>
+  </g>
+</svg>

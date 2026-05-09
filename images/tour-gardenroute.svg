@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#A7F3D0"/>
+    </linearGradient>
+    <linearGradient id="oceanG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E7490"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#skyG)"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="80" rx="60" ry="15" fill="#FFFFFF" fill-opacity="0.8"/>
+  <ellipse cx="650" cy="100" rx="80" ry="18" fill="#FFFFFF" fill-opacity="0.7"/>
+  <!-- Distant cliffs -->
+  <path d="M0,350 L150,280 L320,300 L480,260 L640,290 L800,270 L800,400 L0,400 Z" fill="#15803D" fill-opacity="0.7"/>
+  <path d="M0,380 L100,330 L240,350 L400,320 L560,345 L720,325 L800,340 L800,400 L0,400 Z" fill="#166534"/>
+  <!-- Ocean -->
+  <rect y="400" width="800" height="200" fill="url(#oceanG)"/>
+  <!-- Beach (foreground) -->
+  <path d="M0,520 Q200,500 400,510 T800,505 L800,600 L0,600 Z" fill="#FCD34D"/>
+  <path d="M0,540 Q200,520 400,530 T800,525 L800,600 L0,600 Z" fill="#FBBF24"/>
+  <!-- Wave foam -->
+  <g stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M0,505 Q100,495 200,505 T400,505 T600,505 T800,500"/>
+    <path d="M0,470 Q150,465 300,470 T600,470 T800,468"/>
+  </g>
+  <!-- Palm trees -->
+  <g transform="translate(100, 480)">
+    <path d="M0,40 Q-5,20 -2,0" stroke="#451A03" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-2" cy="-2" rx="25" ry="6" fill="#15803D" transform="rotate(-30 -2 -2)"/>
+    <ellipse cx="-2" cy="-2" rx="25" ry="6" fill="#15803D" transform="rotate(30 -2 -2)"/>
+    <ellipse cx="-2" cy="-2" rx="25" ry="6" fill="#16A34A" transform="rotate(70 -2 -2)"/>
+    <ellipse cx="-2" cy="-2" rx="25" ry="6" fill="#16A34A" transform="rotate(-70 -2 -2)"/>
+    <ellipse cx="-2" cy="-2" rx="25" ry="6" fill="#15803D" transform="rotate(0 -2 -2)"/>
+  </g>
+  <g transform="translate(680, 490)">
+    <path d="M0,30 Q-3,15 -1,0" stroke="#451A03" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-1" cy="-1" rx="20" ry="5" fill="#15803D" transform="rotate(-30 -1 -1)"/>
+    <ellipse cx="-1" cy="-1" rx="20" ry="5" fill="#15803D" transform="rotate(30 -1 -1)"/>
+    <ellipse cx="-1" cy="-1" rx="20" ry="5" fill="#16A34A" transform="rotate(70 -1 -1)"/>
+    <ellipse cx="-1" cy="-1" rx="20" ry="5" fill="#16A34A" transform="rotate(-70 -1 -1)"/>
+  </g>
+</svg>

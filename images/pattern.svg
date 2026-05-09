@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <pattern id="geom" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="2" fill="#0F766E" fill-opacity="0.06"/>
+      <path d="M0,25 L10,25 M40,25 L50,25 M25,0 L25,10 M25,40 L25,50" stroke="#0F766E" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#geom)"/>
+</svg>

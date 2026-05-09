@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042F2E"/>
+      <stop offset="50%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#134E4A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#heroBg)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  
+  <!-- Topographic contour lines -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="1" fill="none">
+    <path d="M0,200 Q400,100 800,200 T1600,180"/>
+    <path d="M0,260 Q400,160 800,260 T1600,240"/>
+    <path d="M0,320 Q400,220 800,320 T1600,300"/>
+    <path d="M0,400 Q400,300 800,400 T1600,380"/>
+    <path d="M0,500 Q400,400 800,500 T1600,480"/>
+    <path d="M0,600 Q400,500 800,600 T1600,580"/>
+    <path d="M0,700 Q400,600 800,700 T1600,680"/>
+  </g>
+  
+  <!-- Mountain silhouettes -->
+  <g fill="rgba(0,0,0,0.25)">
+    <path d="M0,720 L150,580 L280,650 L420,500 L580,620 L720,540 L880,610 L1040,490 L1200,580 L1360,520 L1500,610 L1600,560 L1600,900 L0,900 Z"/>
+  </g>
+  <g fill="rgba(0,0,0,0.4)">
+    <path d="M0,800 L120,720 L240,760 L380,680 L520,740 L680,690 L820,750 L960,700 L1100,760 L1260,710 L1400,770 L1600,730 L1600,900 L0,900 Z"/>
+  </g>
+</svg>

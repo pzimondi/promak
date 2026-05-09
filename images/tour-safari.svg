@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skySaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="groundSaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#skySaf)"/>
+  <!-- Sun -->
+  <circle cx="650" cy="280" r="60" fill="#FEF3C7" fill-opacity="0.9"/>
+  <circle cx="650" cy="280" r="80" fill="#FFFFFF" fill-opacity="0.3"/>
+  <!-- Mountains -->
+  <path d="M0,360 L150,280 L300,330 L450,270 L600,310 L800,290 L800,400 L0,400 Z" fill="#7C2D12" fill-opacity="0.5"/>
+  <!-- Ground -->
+  <rect y="400" width="800" height="200" fill="url(#groundSaf)"/>
+  <!-- Acacia tree silhouette -->
+  <g fill="#1C1917">
+    <rect x="120" y="280" width="6" height="120"/>
+    <ellipse cx="123" cy="270" rx="60" ry="22"/>
+    <ellipse cx="100" cy="260" rx="35" ry="15"/>
+    <ellipse cx="150" cy="265" rx="40" ry="15"/>
+  </g>
+  <!-- Second tree -->
+  <g fill="#1C1917" opacity="0.6">
+    <rect x="660" y="320" width="4" height="80"/>
+    <ellipse cx="662" cy="315" rx="40" ry="14"/>
+  </g>
+  <!-- Elephant silhouettes -->
+  <g fill="#1C1917">
+    <ellipse cx="400" cy="430" rx="60" ry="35"/>
+    <circle cx="345" cy="415" r="22"/>
+    <path d="M 325 420 Q 318 440 322 460" stroke="#1C1917" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <rect x="365" y="450" width="8" height="25"/>
+    <rect x="385" y="450" width="8" height="25"/>
+    <rect x="415" y="450" width="8" height="25"/>
+    <rect x="435" y="450" width="8" height="25"/>
+  </g>
+  <g fill="#1C1917" opacity="0.7">
+    <ellipse cx="500" cy="445" rx="40" ry="22"/>
+    <circle cx="465" cy="435" r="14"/>
+    <path d="M 453 438 Q 449 450 451 462" stroke="#1C1917" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <rect x="478" y="460" width="5" height="18"/>
+    <rect x="491" y="460" width="5" height="18"/>
+    <rect x="510" y="460" width="5" height="18"/>
+    <rect x="523" y="460" width="5" height="18"/>
+  </g>
+  <!-- Grass tufts -->
+  <g stroke="#3F2305" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M50,500 L48,485 M55,500 L57,488"/>
+    <path d="M200,510 L198,495 M205,510 L207,498"/>
+    <path d="M620,520 L618,505 M625,520 L627,508"/>
+  </g>
+</svg>

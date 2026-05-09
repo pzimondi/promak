@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyCT" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <linearGradient id="seaCT" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#skyCT)"/>
+  <!-- Clouds -->
+  <ellipse cx="150" cy="120" rx="80" ry="20" fill="#FFFFFF" fill-opacity="0.8"/>
+  <ellipse cx="600" cy="80" rx="100" ry="22" fill="#FFFFFF" fill-opacity="0.7"/>
+  <!-- Table Mountain - flat-topped -->
+  <path d="M100,450 L100,250 L160,200 L640,200 L700,250 L700,450 Z" fill="#1E40AF"/>
+  <path d="M100,450 L100,250 L160,200 L640,200 L700,250 L700,450 Z" fill="#1E3A8A" fill-opacity="0.4"/>
+  <!-- Cloud on top of mountain (Tablecloth) -->
+  <ellipse cx="400" cy="195" rx="280" ry="18" fill="#FFFFFF" fill-opacity="0.95"/>
+  <ellipse cx="400" cy="190" rx="240" ry="14" fill="#FFFFFF"/>
+  <!-- Mountain texture -->
+  <g stroke="#0F172A" stroke-opacity="0.3" stroke-width="1" fill="none">
+    <line x1="200" y1="220" x2="220" y2="450"/>
+    <line x1="350" y1="210" x2="370" y2="450"/>
+    <line x1="500" y1="210" x2="520" y2="450"/>
+    <line x1="600" y1="220" x2="620" y2="450"/>
+  </g>
+  <!-- Lion's Head -->
+  <path d="M-50,450 L-50,380 L40,300 L80,330 L120,310 L160,360 L160,450 Z" fill="#1E3A8A"/>
+  <!-- Devil's Peak -->
+  <path d="M620,450 L660,330 L720,290 L780,340 L820,380 L820,450 Z" fill="#1E3A8A" fill-opacity="0.85"/>
+  <!-- Sea -->
+  <rect y="450" width="800" height="150" fill="url(#seaCT)"/>
+  <!-- Wave lines -->
+  <g stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="2" fill="none">
+    <path d="M0,490 Q100,485 200,490 T400,490 T600,490 T800,490"/>
+    <path d="M0,520 Q100,515 200,520 T400,520 T600,520 T800,520"/>
+    <path d="M0,550 Q100,545 200,550 T400,550 T600,550 T800,550"/>
+  </g>
+  <!-- Boat -->
+  <g transform="translate(550,475)">
+    <path d="M-20,0 L20,0 L15,-12 L-15,-12 Z" fill="#FFFFFF"/>
+    <rect x="-2" y="-30" width="2" height="20" fill="#1F2937"/>
+    <path d="M0,-28 L10,-15 L0,-15 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bgF)"/>
+  <!-- Decorative circles -->
+  <circle cx="500" cy="100" r="120" fill="#F97316" fill-opacity="0.15"/>
+  <circle cx="80" cy="600" r="180" fill="#0EA5A4" fill-opacity="0.2"/>
+  <!-- Person silhouette - abstract / professional -->
+  <!-- Body -->
+  <path d="M 150 750 L 150 550 Q 150 450 300 450 Q 450 450 450 550 L 450 750 Z" fill="url(#suit)"/>
+  <!-- Shirt collar -->
+  <path d="M 250 460 L 300 510 L 350 460 L 340 480 L 300 540 L 260 480 Z" fill="#FFFFFF"/>
+  <!-- Tie -->
+  <path d="M 295 520 L 305 520 L 312 580 L 300 620 L 288 580 Z" fill="#F97316"/>
+  <!-- Neck -->
+  <rect x="280" y="400" width="40" height="60" fill="#92400E"/>
+  <!-- Head -->
+  <ellipse cx="300" cy="350" rx="80" ry="95" fill="#A16207"/>
+  <!-- Hair -->
+  <path d="M 220 320 Q 220 250 300 250 Q 380 250 380 320 Q 380 290 350 285 Q 320 280 300 285 Q 280 280 250 285 Q 220 290 220 320 Z" fill="#1C1917"/>
+  <!-- Subtle facial features -->
+  <ellipse cx="270" cy="345" rx="6" ry="3" fill="#1C1917"/>
+  <ellipse cx="330" cy="345" rx="6" ry="3" fill="#1C1917"/>
+  <path d="M 280 390 Q 300 400 320 390" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
