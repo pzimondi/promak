@@ -60,7 +60,19 @@
   --accent-dark: var(--teal-900);
   --bg: #ffffff;
   --bg-alt: var(--cream-50);
-  --bg-dark: var(--teal-950);
+  /* African-feel dark — richer forest-emerald with warmth */
+  --bg-dark: #0a3d2e;
+  --bg-dark-top: #155442;
+  --bg-dark-bottom: #08332a;
+  --gold-accent: #E9A823;
+  /* Southern African earth palette */
+  --terracotta: #C44536;
+  --terracotta-deep: #9A2F23;
+  --ochre: #CC8B26;
+  --savanna: #D4A05A;
+  --sunset-orange: #E66B2D;
+  --sunset-purple: #6B3B5C;
+  --baobab: #5A3A22;
   --text: var(--ink-900);
   --text-soft: var(--ink-600);
   --text-light: var(--ink-400);
@@ -254,23 +266,28 @@ p { color: var(--text-soft); }
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
   color: #fff;
-  box-shadow: 0 4px 14px -4px rgba(15, 118, 110, 0.45);
+  box-shadow: 0 4px 16px -4px rgba(13, 148, 136, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 }
 
 .btn-primary::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--teal-600), var(--teal-800));
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
   z-index: -1;
+  opacity: 0;
   transition: opacity var(--t-base);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -8px rgba(15, 118, 110, 0.5);
+  box-shadow: 0 12px 32px -8px rgba(13, 148, 136, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
 }
 
 .btn-primary:active { transform: translateY(0); }
@@ -347,22 +364,23 @@ p { color: var(--text-soft); }
 }
 
 .site-header.is-scrolled {
-  background: rgba(4, 47, 46, 0.92);
-  border-bottom-color: rgba(254, 243, 199, 0.14);
-  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(180deg, var(--bg-dark-top) 0%, var(--bg-dark) 100%);
+  border-bottom-color: rgba(233, 168, 35, 0.35);
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.45), inset 0 -1px 0 0 rgba(233, 168, 35, 0.4);
 }
 
 /* Solid variant for subpages (no hero slideshow underneath) */
 .site-header.is-solid,
 .site-header.is-solid.is-scrolled {
-  background: #042f2e;
+  background: linear-gradient(180deg, var(--bg-dark-top) 0%, var(--bg-dark) 100%);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-bottom-color: rgba(254, 243, 199, 0.1);
+  border-bottom-color: rgba(233, 168, 35, 0.4);
+  box-shadow: inset 0 -1px 0 0 rgba(233, 168, 35, 0.45);
 }
 
 .site-header.is-solid.is-scrolled {
-  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5), inset 0 -1px 0 0 rgba(233, 168, 35, 0.45);
 }
 
 .nav {
@@ -393,7 +411,7 @@ p { color: var(--text-soft); }
   padding: 0.625rem 1rem;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: rgba(254, 243, 199, 0.78);
+  color: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
   transition: color var(--t-fast);
 }
@@ -402,7 +420,7 @@ p { color: var(--text-soft); }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(254, 243, 199, 0.1);
+  background: rgba(233, 168, 35, 0.15);
   border-radius: 999px;
   opacity: 0;
   transform: scale(0.9);
@@ -410,18 +428,18 @@ p { color: var(--text-soft); }
   z-index: -1;
 }
 
-.nav-menu a:hover { color: #FEF3C7; }
+.nav-menu a:hover { color: var(--gold-accent); }
 .nav-menu a:hover::before { opacity: 1; transform: scale(1); }
 
 .nav-menu a.active {
-  color: #FEF3C7;
+  color: var(--gold-accent);
   font-weight: 600;
 }
 
 .nav-menu a.active::before {
   opacity: 1;
   transform: scale(1);
-  background: rgba(94, 234, 212, 0.18);
+  background: rgba(233, 168, 35, 0.18);
 }
 
 .nav-cta {
@@ -539,8 +557,8 @@ body.menu-open { overflow: hidden; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding-top: calc(var(--header-h) + 3rem);
-  padding-bottom: 4rem;
+  padding-top: calc(var(--header-h) + 1rem);
+  padding-bottom: 2rem;
   overflow: hidden;
   background: var(--bg-dark);
   color: #fff;
@@ -590,13 +608,12 @@ body.menu-open { overflow: hidden; }
 }
 
 /* Cinematic gradient overlay */
+/* Ticha-style cinematic black gradient — keeps image visible, ensures text readability */
 .slides::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(4, 47, 46, 0.35) 0%, rgba(4, 47, 46, 0.7) 60%, rgba(4, 47, 46, 0.92) 100%),
-    linear-gradient(90deg, rgba(4, 47, 46, 0.55) 0%, rgba(4, 47, 46, 0) 60%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -725,7 +742,7 @@ body.menu-open { overflow: hidden; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   backdrop-filter: blur(10px);
 }
 
@@ -745,11 +762,13 @@ body.menu-open { overflow: hidden; }
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 9vw, 5.5rem);
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
   line-height: 0.98;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* Line-mask reveal for hero title */
@@ -774,34 +793,33 @@ body.menu-open { overflow: hidden; }
 
 .hero-title .accent {
   font-style: italic;
-  font-weight: 400;
-  background: linear-gradient(135deg, var(--amber-300), var(--plum-500));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-weight: 500;
+  color: #FFD60A;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.5vw + 0.75rem, 1.25rem);
-  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.9375rem, 1.2vw + 0.75rem, 1.125rem);
+  color: #ffffff;
   max-width: 36rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1rem 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   max-width: 36rem;
 }
 
@@ -823,27 +841,28 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (min-width: 768px) {
-  .hero { padding-top: calc(var(--header-h) + 5rem); padding-bottom: 6rem; }
+  .hero { padding-top: calc(var(--header-h) + 1.5rem); padding-bottom: 2.5rem; }
   .hero-stats { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 1024px) {
-  .hero { padding-top: calc(var(--header-h) + 7rem); padding-bottom: 8rem; }
+  .hero { padding-top: calc(var(--header-h) + 2rem); padding-bottom: 3rem; }
 }
 
-/* Decorative compass on hero */
+/* Decorative compass on hero — same white as heading */
 .hero-compass {
   position: absolute;
   top: 14%;
   right: 4%;
-  width: 380px;
-  height: 380px;
-  color: rgba(255, 255, 255, 0.55);
+  width: 360px;
+  height: 360px;
+  color: #ffffff;
+  opacity: 0.92;
   z-index: 0;
   animation: spin-slow 90s linear infinite;
   display: none;
   pointer-events: none;
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
+  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.35));
 }
 
 @keyframes spin-slow {
@@ -2033,22 +2052,26 @@ button:disabled { opacity: 0.7; cursor: wait; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--bg-dark);
-  color: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(180deg, var(--bg-dark-top) 0%, var(--bg-dark) 50%, var(--bg-dark-bottom) 100%);
+  color: rgba(255, 255, 255, 0.88);
   padding: 4rem 0 2rem;
   position: relative;
   overflow: hidden;
+  border-top: none;
 }
 
 .site-footer::before {
   content: "";
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(15, 118, 110, 0.4) 0%, transparent 70%);
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: url('../images/xhosa-pattern.svg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  z-index: 2;
+  border-radius: 0;
   pointer-events: none;
 }
 
@@ -2062,7 +2085,7 @@ button:disabled { opacity: 0.7; cursor: wait; }
 .footer-brand img { height: 48px; margin-bottom: 1rem; width: auto; }
 .footer-brand p {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.82);
   max-width: 22rem;
   line-height: 1.6;
 }
@@ -2070,10 +2093,10 @@ button:disabled { opacity: 0.7; cursor: wait; }
 .footer-col h4 {
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--gold-accent);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   margin-bottom: 1.25rem;
 }
 
@@ -2083,20 +2106,20 @@ button:disabled { opacity: 0.7; cursor: wait; }
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.82);
   transition: color var(--t-fast);
 }
-.footer-col a:hover { color: #fff; }
+.footer-col a:hover { color: var(--gold-accent); }
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(233, 168, 35, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
   text-align: center;
 }
 
@@ -2111,17 +2134,18 @@ button:disabled { opacity: 0.7; cursor: wait; }
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   transition: all var(--t-base);
 }
 
 .footer-social a:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background: var(--gold-accent);
+  color: var(--bg-dark);
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 20px -2px rgba(233, 168, 35, 0.6);
   transform: translateY(-2px);
 }
 
@@ -2789,10 +2813,8 @@ button:disabled { opacity: 0.7; cursor: wait; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  max-width: 360px;
+  margin-inline: auto;
 }
 
 .team-card {
@@ -2854,4 +2876,437 @@ button:disabled { opacity: 0.7; cursor: wait; }
 
 button:focus-visible, .btn:focus-visible {
   outline-offset: 3px;
+}
+
+/* ============================================
+   African-feel theme elements
+   ============================================ */
+
+/* Xhosa beadwork-inspired pattern divider strip */
+.xhosa-divider {
+  height: 20px;
+  width: 100%;
+  background-image: url('../images/xhosa-pattern.svg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  position: relative;
+}
+
+.xhosa-divider-thick {
+  height: 32px;
+  background-image: url('../images/xhosa-pattern.svg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+/* Cape Town skyline silhouette in footer — Table Mountain horizon at golden hour */
+.site-footer {
+  padding-bottom: 13rem; /* room for skyline */
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 220px;
+  background: linear-gradient(180deg,
+    rgba(233, 168, 35, 0.0) 0%,
+    rgba(233, 168, 35, 0.35) 50%,
+    rgba(230, 107, 45, 0.55) 100%);
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: url('../images/cape-skyline.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-position: bottom center;
+  mask-image: url('../images/cape-skyline.svg');
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-position: bottom center;
+}
+
+.footer-grid,
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sunset CTA section — savanna at dusk gradient */
+.cta-section {
+  background: linear-gradient(135deg, #0a3d2e 0%, #155442 30%, #8a4520 75%, var(--sunset-orange) 100%);
+}
+
+.cta-section::before {
+  background: radial-gradient(circle, rgba(255, 196, 80, 0.55) 0%, transparent 70%);
+  opacity: 0.6;
+  width: 600px;
+  height: 600px;
+  top: -150px;
+  right: -150px;
+}
+
+/* Warm sunset glow in hero — top-right corner suggests setting African sun */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(233, 168, 35, 0.28) 0%, rgba(230, 107, 45, 0.12) 40%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Compass — warmer gold tint instead of stark white */
+.hero-eyebrow .pulse {
+  background: var(--terracotta);
+  box-shadow: 0 0 0 0 var(--terracotta);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(196, 69, 54, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(196, 69, 54, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(196, 69, 54, 0); }
+}
+
+/* Service-card / tour-card icons: warmer earth tone hover */
+.section-alt {
+  position: relative;
+}
+
+/* Subtle pattern overlay on dark sections */
+.section-dark {
+  background:
+    linear-gradient(180deg, var(--bg-dark-top) 0%, var(--bg-dark) 100%),
+    radial-gradient(circle at 20% 30%, rgba(233, 168, 35, 0.06) 0%, transparent 50%);
+  background-blend-mode: multiply;
+}
+
+/* Warm accent on highlight elements */
+.tour-card .tour-tag.popular,
+.tag-popular {
+  background: linear-gradient(135deg, var(--gold-accent) 0%, var(--sunset-orange) 100%);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Mobile: less acacia presence */
+@media (max-width: 768px) {
+  .site-footer::after {
+    height: 80px;
+  }
+  .site-footer {
+    padding-bottom: 5rem;
+  }
+}
+
+/* ============================================
+   Fleet Page
+   ============================================ */
+
+/* Decor for fleet page header (matches decor-services/tours pattern) */
+.decor-fleet .blob-1 {
+  background: radial-gradient(circle at 35% 35%, #fcd34d, #E9A823);
+  width: 200px; height: 200px;
+  top: 30px; right: 0;
+  opacity: 0.32;
+}
+.decor-fleet .blob-2 {
+  background: radial-gradient(circle at 35% 35%, #5eead4, #14b8a6);
+  width: 130px; height: 130px;
+  bottom: 10px; left: 20px;
+  opacity: 0.45;
+}
+.decor-fleet .dots-1 { width: 100px; height: 70px; top: 30px; left: 0; opacity: 0.55; }
+
+.decor-fleet .card-main {
+  width: 230px;
+  top: 50px; right: 30px;
+  background: linear-gradient(160deg, #0a3d2e 0%, #155442 100%);
+  color: #fff;
+  padding: 1.125rem 1.25rem 1.25rem;
+}
+.decor-fleet .card-main .label {
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+.decor-fleet .card-main .big {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.decor-fleet .card-main .row {
+  display: flex; align-items: center; gap: 0.5rem;
+  margin-top: 0.875rem; padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.decor-fleet .card-main .row svg { width: 17px; height: 17px; color: var(--gold-accent); flex-shrink: 0; }
+.decor-fleet .card-main .row span { font-size: 0.75rem; color: rgba(255,255,255,0.85); }
+
+.decor-fleet .pill-staria { top: 0; right: 0; }
+.decor-fleet .pill-staria .ico { background: linear-gradient(135deg, #E9A823, #E66B2D); }
+.decor-fleet .pill-brv { top: 230px; right: 10px; }
+.decor-fleet .pill-brv .ico { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+
+.decor-fleet .blob-2 > .tag-clean { color: #042f2e; transform: translate(-50%, -50%) rotate(-6deg); }
+
+.decor-fleet .spark-1 { top: 0;     left: 180px; color: var(--gold-accent); }
+.decor-fleet .spark-2 { top: 200px; right: 0;    color: var(--sunset-orange); animation-delay: 0.8s, 1.7s; }
+.decor-fleet .spark-3 { bottom: 30px; left: 170px; color: #14b8a6; animation-delay: 1.4s, 2.3s; }
+
+/* Fleet image presentation - clean white showroom feel
+   Card frame is on the WRAPPER, image fits inside.
+   This way wide PNGs and tall JPGs both fill the card consistently. */
+.fleet-image {
+  position: relative;
+  background:
+    radial-gradient(ellipse at center bottom, rgba(0,0,0,0.06) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f5f1e8 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(10, 61, 46, 0.12);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.5) inset,
+    0 14px 36px -16px rgba(10, 61, 46, 0.22),
+    0 4px 12px -6px rgba(10, 61, 46, 0.1);
+  padding: 2rem;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--t-base);
+}
+
+.fleet-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  /* All card styling moved to the wrapper above */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.fleet-image:hover {
+  transform: translateY(-2px);
+}
+.fleet-image:hover img {
+  transform: none; /* hover is on wrapper now */
+}
+
+/* The story-card overlay on each vehicle - position on bottom-left */
+.fleet-image .story-card {
+  background: linear-gradient(135deg, var(--bg-dark-top) 0%, var(--bg-dark) 100%);
+  color: #fff;
+  border: 1px solid rgba(233, 168, 35, 0.4);
+  box-shadow: 0 12px 28px -8px rgba(10, 61, 46, 0.35);
+}
+
+.fleet-image .story-card .num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  line-height: 1;
+}
+
+.fleet-image .story-card .label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* On section-alt cream background, add a subtle tinted edge */
+.section-alt .fleet-image {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.6) inset,
+    0 16px 40px -16px rgba(10, 61, 46, 0.28),
+    0 6px 14px -6px rgba(10, 61, 46, 0.12),
+    0 0 0 1px rgba(10, 61, 46, 0.04);
+}
+
+/* Mobile: shorter card to keep proportions reasonable */
+@media (max-width: 768px) {
+  .fleet-image {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+  .fleet-image img {
+    max-height: 240px;
+  }
+}
+
+/* Fleet stats bar */
+.fleet-stats {
+  background: linear-gradient(135deg, var(--bg-dark-top) 0%, var(--bg-dark) 50%, var(--bg-dark-bottom) 100%);
+  padding: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fleet-stats::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(233, 168, 35, 0.15) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.fleet-stats::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(230, 107, 45, 0.12) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.fleet-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.fleet-stat {
+  text-align: center;
+}
+
+.fleet-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--gold-accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.fleet-stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .fleet-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .fleet-stats { padding: 4.5rem 0; }
+}
+
+/* ============================================
+   Vehicle Preselection Banner (on book.html)
+   ============================================ */
+.vehicle-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--bg-dark-top) 0%, var(--bg-dark) 100%);
+  border: 1px solid rgba(233, 168, 35, 0.4);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px -8px rgba(10, 61, 46, 0.25), inset 0 0 0 1px rgba(233, 168, 35, 0.1);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.vehicle-banner::before {
+  content: "";
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  background: radial-gradient(circle, rgba(233, 168, 35, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.vehicle-banner-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--gold-accent);
+  color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.vehicle-banner-text {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.vehicle-banner-eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  font-weight: 700;
+  margin-bottom: 0.125rem;
+}
+
+.vehicle-banner-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.vehicle-banner-change {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all var(--t-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.vehicle-banner-change:hover {
+  background: var(--gold-accent);
+  color: var(--bg-dark);
+  border-color: var(--gold-accent);
+}
+
+@media (max-width: 640px) {
+  .vehicle-banner {
+    flex-wrap: wrap;
+  }
+  .vehicle-banner-change {
+    margin-left: auto;
+  }
 }

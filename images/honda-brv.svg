@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" fill="none">
+  <!-- Subtle ground shadow -->
+  <ellipse cx="400" cy="420" rx="320" ry="14" fill="#000" opacity="0.12"/>
+
+  <!-- Main body shadow under car -->
+  <path d="M 90 380 L 710 380 L 700 405 L 100 405 Z" fill="#000" opacity="0.08"/>
+
+  <!-- Lower body / rocker panel -->
+  <path d="M 95 340
+           L 130 340
+           L 145 365
+           L 215 365
+           L 230 340
+           L 580 340
+           L 595 365
+           L 665 365
+           L 680 340
+           L 705 340
+           L 700 380
+           L 100 380 Z"
+        fill="#dde2e6"/>
+
+  <!-- Main body - clean white with subtle gradient -->
+  <defs>
+    <linearGradient id="bodyBRV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f5f6f7"/>
+      <stop offset="100%" stop-color="#e0e3e6"/>
+    </linearGradient>
+    <linearGradient id="windowBRV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4654"/>
+      <stop offset="100%" stop-color="#5a6878"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Upper body / roof contour -->
+  <path d="M 130 340
+           L 130 280
+           Q 130 220, 200 195
+           L 280 175
+           Q 320 168, 360 165
+           L 480 165
+           Q 540 168, 580 185
+           L 625 215
+           Q 660 245, 680 290
+           L 685 340 Z"
+        fill="url(#bodyBRV)"/>
+
+  <!-- Window pillars area - dark separations -->
+  <!-- Windscreen -->
+  <path d="M 218 197
+           Q 250 178, 295 175
+           L 295 250
+           L 218 250 Z"
+        fill="url(#windowBRV)"/>
+
+  <!-- Front side window -->
+  <path d="M 300 175
+           L 380 175
+           L 380 250
+           L 300 250 Z"
+        fill="url(#windowBRV)"/>
+
+  <!-- Rear side window -->
+  <path d="M 385 175
+           L 475 175
+           L 475 250
+           L 385 250 Z"
+        fill="url(#windowBRV)"/>
+
+  <!-- Rear quarter window -->
+  <path d="M 480 175
+           Q 530 180, 555 200
+           L 580 240
+           L 580 250
+           L 480 250 Z"
+        fill="url(#windowBRV)"/>
+
+  <!-- Door handle lines -->
+  <rect x="320" y="270" width="40" height="4" rx="2" fill="#a0a8b0"/>
+  <rect x="410" y="270" width="40" height="4" rx="2" fill="#a0a8b0"/>
+
+  <!-- Door seams -->
+  <line x1="295" y1="195" x2="295" y2="370" stroke="#c0c5cc" stroke-width="1"/>
+  <line x1="385" y1="195" x2="385" y2="370" stroke="#c0c5cc" stroke-width="1"/>
+  <line x1="475" y1="195" x2="475" y2="370" stroke="#c0c5cc" stroke-width="1"/>
+
+  <!-- Chrome trim along window line -->
+  <line x1="222" y1="252" x2="585" y2="252" stroke="#aab2bb" stroke-width="1.5"/>
+
+  <!-- Headlight -->
+  <path d="M 130 290
+           Q 130 280, 145 280
+           L 175 282
+           Q 180 290, 175 305
+           L 145 305
+           Q 130 305, 130 295 Z"
+        fill="#fcfcfc" stroke="#c0c5cc" stroke-width="1"/>
+  <ellipse cx="158" cy="293" rx="14" ry="8" fill="#e8eef4"/>
+
+  <!-- Grille hint -->
+  <rect x="135" y="320" width="50" height="14" rx="2" fill="#2c3e50" opacity="0.6"/>
+
+  <!-- Rear lights -->
+  <path d="M 670 290
+           Q 680 285, 685 295
+           L 685 315
+           Q 680 320, 670 318
+           L 658 305 Z"
+        fill="#c0392b" opacity="0.85"/>
+
+  <!-- Front wheel arch -->
+  <path d="M 145 365
+           Q 145 320, 195 320
+           Q 245 320, 245 365 Z"
+        fill="#1a1f25"/>
+
+  <!-- Rear wheel arch -->
+  <path d="M 555 365
+           Q 555 320, 605 320
+           Q 655 320, 655 365 Z"
+        fill="#1a1f25"/>
+
+  <!-- Front wheel -->
+  <circle cx="195" cy="365" r="42" fill="#1a1f25"/>
+  <circle cx="195" cy="365" r="36" fill="#2c333d"/>
+  <circle cx="195" cy="365" r="20" fill="#1a1f25"/>
+  <!-- Alloy spokes -->
+  <g stroke="#4a5562" stroke-width="3" stroke-linecap="round">
+    <line x1="195" y1="345" x2="195" y2="385"/>
+    <line x1="175" y1="365" x2="215" y2="365"/>
+    <line x1="181" y1="351" x2="209" y2="379"/>
+    <line x1="181" y1="379" x2="209" y2="351"/>
+  </g>
+  <circle cx="195" cy="365" r="5" fill="#5a6878"/>
+
+  <!-- Rear wheel -->
+  <circle cx="605" cy="365" r="42" fill="#1a1f25"/>
+  <circle cx="605" cy="365" r="36" fill="#2c333d"/>
+  <circle cx="605" cy="365" r="20" fill="#1a1f25"/>
+  <g stroke="#4a5562" stroke-width="3" stroke-linecap="round">
+    <line x1="605" y1="345" x2="605" y2="385"/>
+    <line x1="585" y1="365" x2="625" y2="365"/>
+    <line x1="591" y1="351" x2="619" y2="379"/>
+    <line x1="591" y1="379" x2="619" y2="351"/>
+  </g>
+  <circle cx="605" cy="365" r="5" fill="#5a6878"/>
+
+  <!-- Subtle reflection highlight on body -->
+  <path d="M 200 200 L 480 195 L 480 215 L 200 220 Z" fill="#ffffff" opacity="0.4"/>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <!-- Xhosa beadwork-inspired pattern: red/cream/black/gold geometric motifs
+       Drawn from imibhaco embroidery and Xhosa beadwork traditions of the Eastern Cape -->
+  <defs>
+    <pattern id="xhosa" x="0" y="0" width="40" height="36" patternUnits="userSpaceOnUse">
+      <!-- Cream/eggshell base (mimics traditional beadwork cloth) -->
+      <rect width="40" height="36" fill="#F5E6C8"/>
+
+      <!-- Thin black/deep-teal border top -->
+      <rect x="0" y="0" width="40" height="2" fill="#0a3d2e"/>
+
+      <!-- Upper band: red diamond chain (common in Xhosa beadwork) -->
+      <g fill="#C44536">
+        <polygon points="5,9 9,5 13,9 9,13"/>
+        <polygon points="15,9 19,5 23,9 19,13"/>
+        <polygon points="25,9 29,5 33,9 29,13"/>
+        <polygon points="35,9 39,5 43,9 39,13"/>
+        <polygon points="-5,9 -1,5 3,9 -1,13"/>
+      </g>
+
+      <!-- Middle band: deep teal stripe -->
+      <rect x="0" y="15" width="40" height="2" fill="#0a3d2e"/>
+
+      <!-- Center: gold "bead" dots (ochre/beadwork accent) -->
+      <g fill="#E9A823">
+        <circle cx="2.5" cy="20" r="1.5"/>
+        <circle cx="7.5" cy="20" r="1.5"/>
+        <circle cx="12.5" cy="20" r="1.5"/>
+        <circle cx="17.5" cy="20" r="1.5"/>
+        <circle cx="22.5" cy="20" r="1.5"/>
+        <circle cx="27.5" cy="20" r="1.5"/>
+        <circle cx="32.5" cy="20" r="1.5"/>
+        <circle cx="37.5" cy="20" r="1.5"/>
+      </g>
+
+      <!-- Middle band: deep teal stripe -->
+      <rect x="0" y="23" width="40" height="2" fill="#0a3d2e"/>
+
+      <!-- Lower band: red triangle peaks pointing down -->
+      <g fill="#C44536">
+        <polygon points="0,25 5,33 10,25"/>
+        <polygon points="10,25 15,33 20,25"/>
+        <polygon points="20,25 25,33 30,25"/>
+        <polygon points="30,25 35,33 40,25"/>
+      </g>
+
+      <!-- Bottom thin black/teal border -->
+      <rect x="0" y="34" width="40" height="2" fill="#0a3d2e"/>
+    </pattern>
+  </defs>
+  <rect width="120" height="36" fill="url(#xhosa)"/>
+</svg>

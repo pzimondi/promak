@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" fill="none">
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="425" rx="340" ry="14" fill="#000" opacity="0.12"/>
+  <path d="M 80 385 L 720 385 L 710 410 L 90 410 Z" fill="#000" opacity="0.08"/>
+
+  <defs>
+    <linearGradient id="bodyStaria" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f5f6f7"/>
+      <stop offset="100%" stop-color="#dde0e3"/>
+    </linearGradient>
+    <linearGradient id="windowStaria" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c3a4a"/>
+      <stop offset="100%" stop-color="#4a5868"/>
+    </linearGradient>
+    <linearGradient id="panoramicWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2935"/>
+      <stop offset="100%" stop-color="#3a4654"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lower body -->
+  <path d="M 90 345
+           L 125 345
+           L 140 370
+           L 215 370
+           L 230 345
+           L 565 345
+           L 580 370
+           L 655 370
+           L 670 345
+           L 705 345
+           L 700 385
+           L 95 385 Z"
+        fill="#dde2e6"/>
+
+  <!-- Main body - very tall MPV shape -->
+  <path d="M 95 345
+           L 95 200
+           Q 95 145, 165 130
+           L 235 122
+           L 540 122
+           Q 605 125, 645 150
+           L 685 195
+           Q 705 230, 705 270
+           L 705 345 Z"
+        fill="url(#bodyStaria)"/>
+
+  <!-- Top of windshield - sleek slope -->
+  <path d="M 165 132
+           Q 200 128, 235 125
+           L 235 200
+           L 160 200
+           Q 155 175, 165 132 Z"
+        fill="url(#windowStaria)"/>
+
+  <!-- Driver/front side window -->
+  <path d="M 245 125
+           L 360 125
+           L 360 215
+           L 245 215 Z"
+        fill="url(#windowStaria)"/>
+
+  <!-- Massive panoramic side window (distinctive Staria feature) -->
+  <path d="M 365 125
+           L 545 125
+           L 545 215
+           L 365 215 Z"
+        fill="url(#panoramicWindow)"/>
+
+  <!-- Rear quarter window -->
+  <path d="M 550 125
+           Q 600 130, 625 155
+           L 660 200
+           L 660 215
+           L 550 215 Z"
+        fill="url(#windowStaria)"/>
+
+  <!-- Chrome trim line along window base -->
+  <line x1="168" y1="220" x2="660" y2="220" stroke="#aab2bb" stroke-width="2"/>
+
+  <!-- Sliding door handle -->
+  <rect x="445" y="270" width="50" height="5" rx="2.5" fill="#9aa2ac"/>
+
+  <!-- Driver door handle -->
+  <rect x="290" y="270" width="40" height="4" rx="2" fill="#a0a8b0"/>
+
+  <!-- Door seams -->
+  <line x1="240" y1="135" x2="240" y2="375" stroke="#c0c5cc" stroke-width="1"/>
+  <line x1="365" y1="220" x2="365" y2="375" stroke="#c0c5cc" stroke-width="1"/>
+  <line x1="545" y1="135" x2="545" y2="375" stroke="#c0c5cc" stroke-width="1"/>
+
+  <!-- Hood line -->
+  <line x1="100" y1="232" x2="160" y2="200" stroke="#c0c5cc" stroke-width="1"/>
+
+  <!-- Distinctive horizontal LED daytime light strip (Staria feature) -->
+  <rect x="95" y="225" width="60" height="3" rx="1.5" fill="#dde2e6"/>
+  <rect x="95" y="230" width="60" height="2" rx="1" fill="#9aa2ac"/>
+
+  <!-- Headlight -->
+  <path d="M 96 245
+           L 145 245
+           Q 155 245, 155 255
+           L 155 280
+           Q 155 290, 145 290
+           L 100 290
+           Q 96 290, 96 285 Z"
+        fill="#fcfcfc" stroke="#c0c5cc" stroke-width="1"/>
+  <ellipse cx="125" cy="267" rx="20" ry="10" fill="#dceaf5"/>
+
+  <!-- Grille hint at bottom front -->
+  <rect x="100" y="305" width="55" height="15" rx="2" fill="#2c3e50" opacity="0.7"/>
+
+  <!-- Rear lights (vertical LED bar) -->
+  <rect x="690" y="245" width="15" height="60" rx="2" fill="#c0392b" opacity="0.85"/>
+
+  <!-- Wheel arches -->
+  <path d="M 140 370
+           Q 140 320, 195 320
+           Q 250 320, 250 370 Z"
+        fill="#1a1f25"/>
+  <path d="M 540 370
+           Q 540 320, 595 320
+           Q 650 320, 650 370 Z"
+        fill="#1a1f25"/>
+
+  <!-- Front wheel -->
+  <circle cx="195" cy="370" r="48" fill="#1a1f25"/>
+  <circle cx="195" cy="370" r="40" fill="#2c333d"/>
+  <circle cx="195" cy="370" r="22" fill="#1a1f25"/>
+  <g stroke="#5a6878" stroke-width="3" stroke-linecap="round">
+    <line x1="195" y1="348" x2="195" y2="392"/>
+    <line x1="173" y1="370" x2="217" y2="370"/>
+    <line x1="180" y1="356" x2="210" y2="384"/>
+    <line x1="180" y1="384" x2="210" y2="356"/>
+  </g>
+  <circle cx="195" cy="370" r="6" fill="#6a7888"/>
+
+  <!-- Rear wheel -->
+  <circle cx="595" cy="370" r="48" fill="#1a1f25"/>
+  <circle cx="595" cy="370" r="40" fill="#2c333d"/>
+  <circle cx="595" cy="370" r="22" fill="#1a1f25"/>
+  <g stroke="#5a6878" stroke-width="3" stroke-linecap="round">
+    <line x1="595" y1="348" x2="595" y2="392"/>
+    <line x1="573" y1="370" x2="617" y2="370"/>
+    <line x1="580" y1="356" x2="610" y2="384"/>
+    <line x1="580" y1="384" x2="610" y2="356"/>
+  </g>
+  <circle cx="595" cy="370" r="6" fill="#6a7888"/>
+
+  <!-- Body reflection highlight -->
+  <path d="M 200 230 L 540 225 L 540 245 L 200 250 Z" fill="#ffffff" opacity="0.35"/>
+</svg>

@@ -28,6 +28,7 @@
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="tours.html">Tours</a>
+        <a href="fleet.html">Fleet</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -46,6 +47,7 @@
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="tours.html">Tours</a>
+    <a href="fleet.html">Fleet</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -120,6 +122,19 @@
 <section class="section">
   <div class="container">
     <form id="booking-form" class="booking-form reveal" data-form="booking" data-subject="New Tour Booking - PROMAK">
+
+      <!-- Vehicle preselection banner (only shows when arriving from fleet page via ?vehicle=) -->
+      <div class="vehicle-banner" id="vehicle-banner" hidden>
+        <div class="vehicle-banner-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 11M5 11h14a2 2 0 0 1 2 2v3H3v-3a2 2 0 0 1 2-2zM7 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+        </div>
+        <div class="vehicle-banner-text">
+          <div class="vehicle-banner-eyebrow">Your selected vehicle</div>
+          <div class="vehicle-banner-name" id="vehicle-banner-name">—</div>
+        </div>
+        <a href="fleet.html" class="vehicle-banner-change">Change</a>
+      </div>
+      <input type="hidden" name="vehicle" id="b-vehicle" value="" data-label="Vehicle">
 
       <div class="booking-section">
         <div class="booking-section-title">
@@ -317,6 +332,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="tours.html">Tours</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="book.html">Book Now</a></li>

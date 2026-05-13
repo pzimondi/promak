@@ -224,6 +224,27 @@
     }
   }
 
+  // ---------- Booking form: vehicle pre-select from URL (?vehicle=honda-brv etc.) ----------
+  const vehicleParam = params.get('vehicle');
+  const VEHICLE_INFO = {
+    'honda-brv':       { name: 'Honda BRV',       seats: 4,  desc: 'Up to 4 passengers · Couples & small groups' },
+    'hyundai-staria':  { name: 'Hyundai Staria',  seats: 6,  desc: 'Up to 8 passengers · Premium MPV' },
+    'toyota-quantum':  { name: 'Toyota Quantum',  seats: 8,  desc: 'Up to 12 passengers · Groups & events' }
+  };
+  if (vehicleParam && VEHICLE_INFO[vehicleParam]) {
+    const v = VEHICLE_INFO[vehicleParam];
+    const banner = document.getElementById('vehicle-banner');
+    const nameEl = document.getElementById('vehicle-banner-name');
+    const hidden = document.getElementById('b-vehicle');
+    const passField = document.getElementById('b-passengers');
+    if (banner && nameEl && hidden) {
+      hidden.value = `${v.name} (${v.desc})`;
+      nameEl.innerHTML = `${v.name} <span style="color:rgba(255,255,255,0.7);font-weight:500;font-family:var(--font-sans);font-size:0.875em;margin-left:0.5rem">${v.desc}</span>`;
+      banner.hidden = false;
+    }
+    if (passField) passField.value = v.seats;
+  }
+
   // ---------- Radio card visual selection ----------
   document.querySelectorAll('.radio-card-group').forEach(group => {
     group.addEventListener('change', e => {
@@ -284,6 +305,7 @@
     subject: 'Subject',
     message: 'Message',
     tour: 'Tour',
+    vehicle: 'Vehicle',
     date: 'Preferred date',
     time: 'Preferred time',
     passengers: 'Passengers',
