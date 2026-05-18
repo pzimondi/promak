@@ -229,7 +229,8 @@
   const VEHICLE_INFO = {
     'honda-brv':       { name: 'Honda BRV',       seats: 4,  desc: 'Up to 4 passengers · Couples & small groups' },
     'hyundai-staria':  { name: 'Hyundai Staria',  seats: 6,  desc: 'Up to 8 passengers · Premium MPV' },
-    'toyota-quantum':  { name: 'Toyota Quantum',  seats: 8,  desc: 'Up to 12 passengers · Groups & events' }
+    'toyota-quantum':  { name: 'Toyota Quantum',  seats: 8,  desc: 'Up to 12 passengers · Groups & events' },
+    'mercedes-benz':   { name: 'Mercedes-Benz C-Class', seats: 2, desc: 'Up to 4 passengers · Executive sedan' }
   };
   if (vehicleParam && VEHICLE_INFO[vehicleParam]) {
     const v = VEHICLE_INFO[vehicleParam];
