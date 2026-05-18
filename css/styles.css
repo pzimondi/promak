@@ -2850,6 +2850,15 @@ button:disabled { opacity: 0.7; cursor: wait; }
   margin-bottom: 0.875rem;
 }
 .team-card-body p { font-size: 0.9375rem; line-height: 1.6; }
+.team-card-body .team-trust-line {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(15, 61, 42, 0.12);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(15, 61, 42, 0.72);
+  line-height: 1.55;
+}
 
 /* ---------- Skip link (accessibility) ---------- */
 .skip-link {

@@ -1,14 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
-  <rect x="2" y="8" width="64" height="64" rx="8" fill="rgba(254,243,199,0.12)" stroke="rgba(254,243,199,0.25)" stroke-width="1"/>
-  <g stroke="#FEF3C7" fill="none" stroke-linecap="round">
-    <path d="M 14 22 Q 14 14, 26 14 L 44 14 Q 56 14, 56 26 L 56 36 Q 56 46, 44 46 L 30 46" stroke-width="3"/>
-    <path d="M 18 26 Q 18 20, 26 20 L 42 20 Q 50 20, 50 28 L 50 34 Q 50 40, 42 40 L 30 40" stroke-width="2.2" opacity="0.7"/>
-    <path d="M 22 30 Q 22 26, 28 26 L 40 26 Q 44 26, 44 30 L 44 32 Q 44 34, 40 34 L 30 34" stroke-width="1.6" opacity="0.5"/>
-  </g>
-  <rect x="14" y="40" width="4" height="22" rx="2" fill="#FEF3C7"/>
-  <g transform="translate(57, 61)">
-    <path d="M 0 -6 L 1.4 -1.4 L 6 0 L 1.4 1.4 L 0 6 L -1.4 1.4 L -6 0 L -1.4 -1.4 Z" fill="#5EEAD4"/>
-  </g>
-  <text x="80" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#FEF3C7" letter-spacing="0.5">PROMAK</text>
-  <text x="80" y="62" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(254,243,199,0.7)" letter-spacing="3">TRAVEL  &amp;  TOURS</text>
+  <svg x="4" y="4" width="72" height="72" viewBox="0 0 680 680" overflow="visible">
+    <rect x="0" y="0" width="680" height="680" rx="80" fill="#F5E4B0"/>
+    <circle cx="340" cy="340" r="248" stroke="#C28A55" stroke-width="3" fill="none"/>
+    <polygon points="340,100 360,340 340,580" fill="#D9B570"/>
+    <polygon points="340,100 320,340 340,580" fill="#ECD493"/>
+    <polygon points="100,340 340,320 580,340" fill="#ECD493"/>
+    <polygon points="100,340 340,360 580,340" fill="#D9B570"/>
+    <circle cx="340" cy="340" r="128" fill="#F0BA2C"/>
+    <path d="M 92 502 L 160 430 L 210 376 L 240 310 L 272 366 L 296 286 L 308 268 L 372 268 L 384 286 L 408 366 L 440 310 L 470 376 L 520 430 L 588 502 Z" fill="#0F3D2A"/>
+    <rect x="92" y="498" width="496" height="10" fill="#DE6E2C"/>
+    <text x="340" y="78" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">N</text>
+    <text x="340" y="650" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">S</text>
+    <text x="44" y="368" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">W</text>
+    <text x="636" y="368" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">E</text>
+  </svg>
+  <text x="86" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#FEF3C7" letter-spacing="0.5">PROMAK</text>
+  <text x="86" y="62" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(254,243,199,0.7)" letter-spacing="3">TRAVEL  &amp;  TOURS</text>
 </svg>
