@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
-  <svg x="4" y="4" width="72" height="72" viewBox="0 0 680 680" overflow="visible">
-    <rect x="0" y="0" width="680" height="680" rx="80" fill="#F5E4B0"/>
-    <circle cx="340" cy="340" r="248" stroke="#C28A55" stroke-width="3" fill="none"/>
-    <polygon points="340,100 360,340 340,580" fill="#D9B570"/>
-    <polygon points="340,100 320,340 340,580" fill="#ECD493"/>
-    <polygon points="100,340 340,320 580,340" fill="#ECD493"/>
-    <polygon points="100,340 340,360 580,340" fill="#D9B570"/>
-    <circle cx="340" cy="340" r="128" fill="#F0BA2C"/>
-    <path d="M 92 502 L 160 430 L 210 376 L 240 310 L 272 366 L 296 286 L 308 268 L 372 268 L 384 286 L 408 366 L 440 310 L 470 376 L 520 430 L 588 502 Z" fill="#0F3D2A"/>
-    <rect x="92" y="498" width="496" height="10" fill="#DE6E2C"/>
-    <text x="340" y="78" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">N</text>
-    <text x="340" y="650" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">S</text>
-    <text x="44" y="368" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">W</text>
-    <text x="636" y="368" text-anchor="middle" fill="#8B4A2E" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">E</text>
-  </svg>
-  <text x="86" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#0F3D2A" letter-spacing="0.5">PROMAK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC72C"/>
+      <stop offset="50%" stop-color="#E9A823"/>
+      <stop offset="100%" stop-color="#E66B2D"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4, 4) scale(0.3)">
+    <circle cx="120" cy="120" r="116" fill="#0a3d2e"/>
+    <circle cx="120" cy="120" r="104" fill="#FEF3C7"/>
+    <circle cx="120" cy="120" r="98" fill="none" stroke="#E9A823" stroke-width="2.5"/>
+    <circle cx="120" cy="120" r="90" fill="url(#skyD)"/>
+    <path d="M 42 178 L 42 162 Q 50 158, 58 152 L 66 142 Q 72 132, 76 116 Q 78 108, 81 105 Q 83 103, 85 105 Q 87 109, 89 116 L 92 128 Q 95 116, 100 104 L 108 92 L 144 92 L 152 104 Q 157 116, 160 128 L 163 116 Q 165 109, 167 105 Q 169 103, 171 105 Q 174 108, 176 116 Q 180 132, 186 142 L 194 152 Q 200 158, 206 162 L 206 178 Z" fill="#0a3d2e"/>
+    <line x1="108" y1="92" x2="144" y2="92" stroke="#FFC72C" stroke-width="3"/>
+  </g>
+  <text x="86" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#0a3d2e" letter-spacing="0.5">PROMAK</text>
   <text x="86" y="62" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#7A5C3B" letter-spacing="3">TRAVEL  &amp;  TOURS</text>
 </svg>
