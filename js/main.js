@@ -41,6 +41,15 @@
   const body = document.body;
 
   if (navToggle && mobileMenu) {
+    // Mark current page as active in mobile menu
+    const currentPage = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    mobileMenu.querySelectorAll('nav a').forEach(link => {
+      const linkPage = (link.getAttribute('href') || '').split('/').pop().toLowerCase();
+      if (linkPage === currentPage) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
     navToggle.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('is-open');
       navToggle.classList.toggle('is-active', isOpen);
